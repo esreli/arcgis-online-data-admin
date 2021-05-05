@@ -1,0 +1,12 @@
+#
+# Config file for transmute.py
+#
+portal:
+  url: http://www.arcgis.com
+source:
+  feature-service-item-id: "96de67ef007849abacd9fc589561468c"
+  layer-index: 0
+destination:
+  feature-service-item-id: "886972ae13d841f6b32395bdfa2a03eb"
+  layer-index: 0
+  reference-id-key: "SOURCEID"

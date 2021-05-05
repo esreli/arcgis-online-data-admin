@@ -1,0 +1,12 @@
+name: agol-data-admin
+channels:
+  - esri
+  - defaults
+  - anaconda
+dependencies:
+  - arcgis
+  - python=3.8
+  - pyyaml
+  - pandas
+  - requests
+prefix: /Users/eli9422/opt/anaconda3/envs/agol-data-admin
