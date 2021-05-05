@@ -20,6 +20,7 @@ This project is an evolving collection of scripts that can be used to manage pub
       - [Dev](#dev)   
 - [Scripts](#scripts)   
    - [`transmute`](#transmute)   
+      - [Setting up your own transmutable services](#setting-up-your-own-transmutable-services)   
 
 <!-- /MDTOC -->
 
@@ -41,13 +42,13 @@ It is recommended you use `conda` to create and manage the virtual environment.
 
 Create a Python 3 virtual environment and install project dependencies:
 
-`conda env create -f afd-env.yml`
+`conda env create -f agol-data-admin.yml`
 
 ##### Activate
 
 Then, activate the Python 3 virtual environment.
 
-`conda activate afd-env`
+`conda activate agol-data-admin`
 
 > To deactivate the virtual environment type `conda deactivate`.
 
@@ -61,11 +62,11 @@ If your contribution requires a new python dependency, please continue to use co
 
 Be sure to export the new environment so that all contributors have the same environment.
 
-`conda env export -c esri --from-history > afd-env.yml`
+`conda env export -c esri --from-history > agol-data-admin.yml`
 
 Other contributors will update their environment.
 
-`conda env update -f afd-env.yml`
+`conda env update -f agol-data-admin.yml`
 
 #### AGOL Credentials
 
@@ -133,11 +134,11 @@ Some scripts support 'DEV' environment which allows you to pass a limit to how m
 
 ### `transmute`
 
-Transmute allows you to transmute data stored in a source feature layer to a destination feature layer. This is particularly useful for performing nightly data scrubbing tasks. 
+Transmute allows you to transmute data stored in a source feature layer to a destination feature layer. This is particularly useful for performing nightly data scrubbing tasks.
 
 The script uses the source data as the source of truth and edits the destination feature layer based on what is contained by the source. Any edits made to the source layer will be captured by the script and supplied to the destination layer at the next time the script is performed.
 
-The script is designed to transmute a single feature layer, not an entire service; to transmute an entire service, perform the script repeatedly, layer by layer. 
+The script is designed to transmute a single feature layer, not an entire service; to transmute an entire service, perform the script repeatedly, layer by layer.
 
 The script takes a configuration file formatted as so.
 
